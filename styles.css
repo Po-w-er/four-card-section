@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:  hsl(0, 0%, 98%);
+    row-gap: 15px;
+    min-height: 100vh;
+}
+
+header{
+  text-align: center;
+  width: 475px;
+  line-height: 1.2em;
+  color:  hsl(229, 6%, 66%);
+}
+
+.first-header-text{
+    font-weight: 100;
+    font-size: 2em;
+    color:  hsl(234, 12%, 34%);
+}
+.second-header-text{
+    font-weight: 700;
+    color:  hsl(234, 12%, 34%);
+    font-size: 2em;
+}
+header p{
+    font-size: 1em;
+    line-height: 1.5rem;
+}
+
+main{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 30px;
+    grid-template-areas: "supervisor team calculator"
+    "supervisor karma calculator"
+    "supervisor karma calculator";
+    width: 900px;
+    height: 300px;
+    padding: 30px 30px;
+}
+article{
+    background:hsl(0, 0%, 98%);
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 350px;
+    height: 250px;
+    border-radius: 7px;
+}
+
+  
+  /* On mouse-over, add a deeper shadow */
+  .article:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    line-height: 1em;
+    padding: 2px 16px;
+  }
+
+  .supervisor-card{
+    position: relative;
+    grid-area: supervisor;
+    border-top: 5px solid hsl(180, 62%, 55%);
+  }
+
+  .team-card{
+    position: relative;
+    grid-area: team;
+    border-top: 5px solid hsl(0, 78%, 62%);
+  }
+  .team-img, .karma-img,.super-img,.cal-img{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+  }
+  .calculator-card{
+    position: relative;
+    grid-area: calculator;
+    border-top: 5px solid  hsl(212, 86%, 64%) ;
+   
+  }
+  .karma-card{
+    grid-area: karma;
+    position: relative;
+    border-top: 5px solid  hsl(34, 97%, 64%) ;
+  }
+  
+  h1{
+    color: hsl(234, 12%, 34%);
+
+  }
+  p{
+    color:  hsl(229, 6%, 66%);
+    line-height: 1.5rem;
+  }
+
+  .supervisor-card:hover, .calculator-card:hover{
+    transform: scaleY(1.06);
+  }
+
+  .team-card:hover, .karma-card:hover{
+    transform: scaleY(1.06);
+  }
+
+@media (max-width: 1121px){
+    main{
+        margin: auto 30px;
+      
+    }
+    article{
+        width: 305px;
+        height: 250px;
+        
+    }
+        /* grid-template-areas: "supervisor supervisor supervisor"
+        "team team team"
+        "karma karma karma"
+        "cal cal cal";
+    }
+    .supervisor-card{
+        grid-area: supervisor;
+    }
+
+    .team-card{
+       
+        grid-area: team;
+      
+      }
+     
+      
+      .calculator-card{
+       
+        grid-area: cal;
+       
+       
+      }
+      .karma-card{
+        grid-area: karma;
+    
+      }
+       */
+}
+
+@media(max-width:986px){
+    main{
+        width: 500px;
+        margin: auto 30px;
+        gap: 30px;
+        grid-template-areas: 
+        "supervisor supervisor team team"
+        "supervisor supervisor team team"
+        "karma karma cal cal"
+        "karma karma cal cal";
+      
+    }
+    article{
+        
+        width: 305px;
+        height: 250px;
+        
+    }
+
+    .supervisor-card{
+        grid-area: supervisor;
+    }
+
+    .team-card{
+       
+        grid-area: team;
+      
+      }
+     
+      
+      .calculator-card{
+       
+        grid-area: cal;
+       
+       
+      }
+      .karma-card{
+        grid-area: karma;
+    
+      }
+    
+
+}
+
+@media(max-width:647px) {
+
+    main{
+        width: 300px;
+        margin: auto 30px;
+        gap: 30px;
+        grid-template-areas: 
+        "supervisor supervisor supervisor supervisor "
+        "team team team team"
+        "karma karma karma karma"
+        "cal cal cal cal";
+      
+    }
+    article{
+        width: 500px;
+        height: 250px;
+        
+    }
+
+    .supervisor-card{
+        grid-area: supervisor;
+    }
+
+    .team-card{
+       
+        grid-area: team;
+      
+      }
+     
+      
+      .calculator-card{
+       
+        grid-area: cal;
+       
+       
+      }
+      .karma-card{
+        grid-area: karma;
+    
+      }
+    
+}
+
+@media(max-width: 505px){
+    header{
+       max-width: 100%;
+    }
+    main{
+        margin: auto 30px;
+    }
+    article{
+        max-width: 100%;
+        width: 400px;
+        height: 250px;
+        
+    }
+} 
+
+@media(max-width: 410px){
+    header{
+        line-height: 2rem;
+    }
+
+    article{
+        max-width: 100%;
+        width: 300px;
+        height: 250px;
+        
+    }
+
+}
+
+@media(max-width: 375px){
+    header{
+        line-height: 1rem;
+        width: 300px;
+        
+    }
+
+    .first-header-text{
+        font-size: 1.5em;
+    }
+    .second-header-text{
+        font-size: 1.5em;
+    }
+
+    article{
+        max-width: 100%;
+    }
+}
